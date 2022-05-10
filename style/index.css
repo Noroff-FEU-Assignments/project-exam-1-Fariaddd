@@ -1,48 +1,117 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #EAEAF9;
+}
+a{
+  color: #fff;
+}
+.header{
+  background-color: #1D1D48;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,-1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #1D1D48;
+}
+.header ul a{
+  display: block;
+  padding: 20px;
+  border-right: 1px solid #1D1D48;
+  text-decoration: none;
+}
+
+.header ul a:hover{
+  background-color: black;
+}
+.header .logo {
+  float: left;
+  display: block;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.header .menu{
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+.header .menu-icon{
+  padding: 28px 20px;
+  position: relative;  
+  float: right;
+  cursor: pointer;
+}
+.header .menu-icon .nav-icon{
+  background: #fff;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition:background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition:all .2s ease-out;
+  top: 5px;
+}
+.header .menu-icon .nav-icon:after{
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition:all .2s ease-out;
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+.header .menu-btn:checked ~ .menu{
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+  background:transparent ;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media  (min-width:48em){
+  .header li{
+    float: left;
   }
-  
-  .mobile-container {
-    max-width: 480px;
-    margin: auto;
-    background-color: #555;
-    height: 500px;
-    color: white;
-    border-radius: 10px;
+  .header li a{
+    padding: 20px 30px;
   }
-  
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
+  .header .menu{
+    clear: none;
+    float: right;
+    max-height: none;
   }
-  
-  .topnav #myLinks {
+  .header .menu-icon{
     display: none;
   }
-  
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  .topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .active {
-    background-color: #04AA6D;
-    color: white;
-  }
+}
