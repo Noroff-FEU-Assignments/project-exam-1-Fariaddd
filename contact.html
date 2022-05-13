@@ -5,8 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-    
+    <header class="header">
+        <a href="index.html" class="logo">Veggie Restaurant</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn"/>
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="food.html">Meny</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+    </header>
+        
+    <div class="containerr">
+        <form name="custom_form" onsubmit="return validForm()" action="valid.html">
+            <div class="form_box">
+                <div class="input-roww">
+                    <input type="text" placeholder="Name*" name="name" >
+                    <span class="error"> Please enter your name</span>
+                </div>
+                <div class="input-roww">
+                    <input type="text" placeholder="Email*" name="email" >
+                    <span class="error"> Please enter your email</span>
+                </div>
+                <div class="input-roww">
+                    <input type="text" placeholder="phone*" name="phone" >
+                    <span class="error"> Please enter your hone</span>
+                </div>
+                <div class="input-roww">
+                    <select name="subject">
+                        <option value="">Subject*</option>
+                        <option value="Booking">Booking Bord</option>
+                        <option value="Order">Order</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+                    <span class="error">  Subject</span>
+                </div>
+                <div class="input-roww">
+                    <textarea placeholder="Message" name="message"></textarea>
+                    <span class="error"> Message</span>
+                </div>
+                <div class="input-roww">
+                    <label class="checl_label" for="conditions">Accept all terms and conditions</label>
+                    <input type="checkbox" name="conditions" id="conditions">
+                    <span class="error"> </span>
+                </div>
+                <input type="submit" value="Submit"  >
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer-container">
+          <nav class="footer-navv">
+            <ul>
+              <h3>Contact</h3>
+              <li>Veggie@live.no</li>
+              <br>
+              <li>Tell: +479566433</li>
+            </ul>
+          </nav>
+          <nav class="footer-navv">
+            <ul>
+              <h3>Social Media</h3>
+              <li>Facebook</li>
+              <li>Snapchatt</li>
+              <li>Instagram</li>
+            </ul>
+          </nav>
+          <nav class="footer-navv">
+            <ul>
+              <h3>Adress</h3>
+              <li>Mølleparken 4</li>
+              <br>
+              <li>Oslo 0459 </li>
+            </ul>
+          </nav>
+        </div>
+    </footer>
+    <script src="script/contact.js" defer></script>
 </body>
 </html>
