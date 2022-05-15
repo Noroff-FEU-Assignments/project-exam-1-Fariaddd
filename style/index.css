@@ -159,7 +159,7 @@ a{
 
 .footer-container {
   height: auto;
-  background-color: rgb(32, 32, 32);
+  background-color: #1D1D48;
   display: flex;
   justify-content: center;
 }

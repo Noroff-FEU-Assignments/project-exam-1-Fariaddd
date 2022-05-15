@@ -101,65 +101,13 @@ body{
   
   /* hero banna*/
   
-  
-  
-  
-  
-  @media  (min-width:48em){
-    .header li{
-      float: left;
-    }
-    .header li a{
-      padding: 20px 30px;
-    }
-    .header .menu{
-      clear: none;
-      float: right;
-      max-height: none;
-    }
-    .header .menu-icon{
-      display: none;
-    }
-  }
-  
-  
-  
-  .main-img{
-    position: relative;
-    background: url(/img/hero\ banner.JPG) no-repeat center;
-    background-size: cover;
-    height: 400px;
-    overflow: hidden;
-  }
-  
-  .container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #1D1D48;
-  }
-  
-  
-  .button{
-    color: #ffffff;
-    padding: 10px 24px;
-    margin: auto;
-    background: #1D1D48;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: .4s;
-  }
-  .button:hover{
-    opacity: .4;
-  }
+
    
   /*footer*/
   
   .footer-container {
     height: auto;
-    background-color: rgb(32, 32, 32);
+    background-color: #1D1D48;
     display: flex;
     justify-content: center;
   }
@@ -277,13 +225,35 @@ body{
   
   
       
-.chana-masalaa{
-    display: block;
-    padding: 1%;
+.chana-masalaa img{
+    padding-left: 50px;
+    filter: grayscale(100%);
+    transition: 1s;
 }  
 
-.img-overlapping{
+.imgg{
     position: relative;
-    padding-left: 16px;
+    padding-left: 50px;
     margin: -4px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+ .imgg:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+.chana-masalaa img{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+  h1{
+   height: 100px;
+   position: absolute;
+   float: right;
+
+   
+    
+    
 }
