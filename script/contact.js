@@ -1,5 +1,5 @@
 function validForm(){
-    //alert("alert")
+    //* alert("alert")
     var name = document.custom_form.name;
     var email = document.custom_form.email;
     var phone = document.custom_form.phone;
