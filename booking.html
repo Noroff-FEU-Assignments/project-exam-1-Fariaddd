@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style/booking.css">
+    <title>Booking</title>
 </head>
 <body>
-    
+    <div class="container-booking">
+        <div class="container-timer">
+            <h2 class="heading-open">Time Open</h2>
+            <h3 class="heading-days">Monday-Friday</h3>
+            <p>7am - 1am(breakfast)</p>
+            <p>1am - 10am(Lunch/dinner)</p>
+
+            <hr>
+            <h4 class="heading-phone">Call Us: 479566433</h4>
+        </div>
+        <div class="container-form">
+            <form action="#">
+                <h2 class="heading heading-yellow">Reservation Online</h2>
+                <div class="form-field">
+                    <p>Your Name</p>
+                    <input type="text" placeholder="Your Name">
+                </div>
+                <div class="form-field">
+                    <p>Your email</p>
+                    <input type="text" placeholder="Your Email">
+                </div>
+                <div class="form-field">
+                    <p>Date</p>
+                    <input type="date">
+                </div>
+                <div class="form-field">
+                    <p>Time</p>
+                    <input type="time">
+                </div>
+                <div class="form-field">
+                    <p>How many people?</p>
+                    <select name="" id="#">
+                        <option value="1">1 Person</option>
+                        <option value="2">2 Persons</option>
+                        <option value="3">3 Persons</option>
+                        <option value="4">4 Persons</option>
+                        <option value="5">5 Persons</option>
+                        <option value="5+">5+ Persons</option>
+                    </select>
+                    <button class="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
