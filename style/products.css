@@ -180,20 +180,13 @@ body{
     font-weight: bold;
   }
   @media screen and (max-width: 768px) {
-    .container- {
+    .food-container {
       flex-direction: column;
       margin: 10px;
       text-align: center;
     }
   }
-  .container--{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #1D1D48;
-  }
+ 
 .food-container 
 {
   width: 100%;
@@ -258,9 +251,11 @@ main{
 .text-container{
   display: flex;
   top: 50px;
+  font-size: 17px;
 }
 button{
   border-radius: 5px;
+  cursor: pointer;
   
 }
 
