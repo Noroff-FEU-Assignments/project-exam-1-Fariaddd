@@ -7,7 +7,7 @@
     <title>Products-page</title>
     <link rel="stylesheet" type="text/css" href="style/products.css">
     <link rel="stylesheet" type="text/css" href="style/lightbox.min.css">
-    <script type="text/javascript" src="script/lightbox-plus-jquery.min.js"></script>
+    <script src="script/post-fetch.js"></script>
 </head>
 <body>
     <header class="header">
@@ -31,13 +31,19 @@
               </div>
               <div class="food-img">
               <div class="food-imgs img1"> 
-                 <a href="/img/channa massala.jpg"> <img src="/img/channa massala.jpg" alt="chana-masala"> </a>
+                  <img src="/img/channa massala.jpg" alt="chana-masala" id="myImg" style="width:100%;max-width:300px"> 
               </div>
               <div class="food-imgs img2"> 
-                 <a href="/img/chana-masala.webp"><img src="img/chana-masala.webp" alt="chana-masala"></a>
+                 <img src="img/chana-masala.webp" alt="chana-masala" id="myImg" style="width:100%;max-width:300px">
               </div>
               <div class="food-imgs img3"> 
-                 <a href="/img/channa massala.jpg"><img src="img/channa massala.jpg" alt="chana-masala"></a>
+                 <img src="img/channa massala.jpg" alt="chana-masala"  id="myImg" style="width:100%;max-width:300px">
+              </div>
+              <div id="myModal" class="modal">
+                <span class="close"></span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+
               </div>
              </div>
             </div>
