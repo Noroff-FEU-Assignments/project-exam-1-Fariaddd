@@ -1,8 +1,8 @@
 const APIurl = 'http://projectexam.local/wp-json/wp/v2/posts'
 
-const getDetails = document.querySelector(".container-")
+const getDetail = document.querySelector("daall-container")
 
-async function getPosts(){
+async function getPost(){
     try{
         const response = await fetch(APIurl);
         const responseJSON = await response.json();
@@ -10,20 +10,20 @@ async function getPosts(){
         
         const myArr = responseJSON;
         for (let i = 0; i < myArr.length; i++){
-            getDetails.innerHTML += `
+            const name = getPost[i].id;
+            getDetail.innerHTML += `
             <div class="div-container">
-                <a href="products.html?id=${myArr[i]}">
+                <a href="daal-turka.html?id=${myArr[i]}">
                 <img class="img" src="${myArr[i].x_featured_media_original}" alt="chana-masala">
                  </a>
                 <div class="text">
-                 <a href="./products.html"><button>${myArr[i].title.rendered}</button>
+                 <a href="daal-turka.html"><button>${myArr[i].title.rendered}</button>
                 </a>
                 </div>
-            </div>
-            `
+            </div>`
         }
     }catch{
 
     }
 }
-getPosts();
+getPost();
