@@ -9,14 +9,15 @@ async function getPosts(){
        // console.log(responseJSON);
         
         const myArr = responseJSON; 
+        console.log(myArr);
         for (let i = 0; i < myArr.length; i++){
             getDetails.innerHTML += `
             <div class="div-container">
-                <a href="products.html?id=${myArr[i]}"> 
+                <a href="products.html?id=${myArr[i].id}"> 
                 <img class="img" src="${myArr[i].x_featured_media_original}" alt="chana-masala"> 
                  </a>
                 <div class="text">
-                 <a href="./products.html"><button>${myArr[i].title.rendered}</button>
+                 <a href="products.html?${myArr[i].id}"><button>${myArr[i].title.rendered}</button>
                 </a>
                 </div>
             </div> `
