@@ -7,8 +7,6 @@
     <title>Contact</title>
     <link rel="stylesheet" href="style/contact.css">
     <script src="script/contact.js" defer></script>
-    
-   
 </head>
 <body>
     <header class="header">
@@ -22,29 +20,33 @@
                 <li><a href="food.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
-    </header> 
-    <main>
-        <section>
-            <div class="contact-container">
-                <h1>Contact Us</h1>
-                <div class="contact-toaster"></div>
-                <form  class="contact-form" action="http://projectexam.local/wp-json/contact-form-7/v1/contact-forms/5/feedback" method="post" >
-                    <input type="text" class="contact-form-text" placeholder=" Your name" name="your-name" id="yourName">
-                    <input type="email" class="contact-form-text" placeholder=" Your email"name="your-email" id="yourEmail" >
-                    
-                    <input type="text" class="contact-form-text" placeholder=" Your subject" name="your-subject" id="yourSubject" >
-                     <!-- <select name="your-subject" id="">
-                      <option value="booking">Booking</option>
-                      <option value="Order">Order</option>
-                      <option value="other">Other</option>
-                    </select> -->
-                    <textarea class="contact-form-text" placeholder="Your message" id="yourMessage" name="your-message"></textarea>
-                    <input type="submit" class="contact-form-btn" value="Send">
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer>
+    </header>  
+    <div id="container">
+      <form action="https://tense-expansion.flywheelsites.com/wp-json/wp/v2/posts/contact-forms/52/feedback" method="post" onsubmit="event.preventDefault(); validateForm()">
+        <h1> Contact Us</h1>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name">
+        <small class="bord-error"></small>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Your email">
+        <small class="bord-error"></small>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Your subject">
+        <small class="bord-error"></small>
+
+        <label for="message">Message</label>
+        <textarea id="message"  rows="7" placeholder="Write your message here"></textarea>
+        <small class="bord-error"></small>
+        <div class="btn">
+          <input type="submit" value="Send Message">
+          <p id="seccessfull"></p>
+        </div>
+      </form>
+    </div>
+     <footer>
         <div class="footer-container">
           <nav class="footer-navv">
             <ul>
@@ -70,7 +72,15 @@
               <li>Oslo 0459 </li>
             </ul>
           </nav>
+          <nav class="footer-navv">
+            <ul>
+              <h3>Openings hours</h3>
+              <li>Monday-Friday</li>
+              <br>
+              <li>7am-10pm </li>
+            </ul>
+          </nav>
         </div>
     </footer>
 </body>
-</html> 
+</html>  

@@ -1,72 +1,50 @@
-const contactForm = document.querySelector('.contact-form');
-const contactToster = document.querySelector('.contact-toaster');
+const contactForm = document.getElementById("contactForm");
+const nameInput = document.querySelector("#name");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+const seccessfull = document.querySelector("#seccessfull");
+const subject = document.querySelector("#subject");
+const errorNo = document.querySelectorAll(".bord-error");
 
-async function formHandler (event){
-    event.preventDefault()
-    try{
-        const formElement = event.target,
-    { action, method } = formElement,
-    body = new FormData(formElement);
+function validateForm(){
 
-    const Response = await fetch(action, {
-        method,
-        body
-      })
-      const Responsejson = await Response.json();
-      console.log(Responsejson.message);
-      contactToster.innerHTML = Responsejson.message
-
-      const nameIput = this.querySelector('#yourName');
-console.log(nameIput);
-if(nameIput.value.length < 5){
-    console.log(nameIput.classList)
-    nameIput.classList.add("error")
-}else{
-    console.log(nameIput.value.length + 'ff')
-    if(yourName.classList.contains("error")){
-        yourName.classList.remove("error");
+    clearMessage();
+    let errorSuccess = false;
+   
+    if(nameInput.value.length < 1){
+        errorNo[0].innerText = "Name can not be blank";
+        nameInput.classList.add("error-border");
+        errorSuccess = true;
     }
-    nameIput.classList.add("perfect")
-}
-const subjectIput = this.querySelector('#yourSubject');
-console.log(subjectIput);
-if(subjectIput.value.length < 15){
-    console.log(subjectIput.classList)
-    subjectIput.classList.add("error")
-}else{
-    console.log(subjectIput.value.length + 'ff')
-    if(yourSubject.classList.contains("error")){
-        yourSubject.classList.remove("error");
+    if(!emailIsValid(email.value)){
+        errorNo[1].innerText = "Invalid email";
+        email.classList.add("error-border");
+        errorSuccess = true;
     }
-    subjectIput.classList.add("perfect")
-}
-const yourMessage = this.querySelector('#yourMessage');
-console.log(yourMessage);
-if(yourMessage.value.length < 25){
-    console.log(yourMessage.classList)
-    yourMessage.classList.add("error")
-}else{
-    console.log(yourMessage.value.length + 'ff')
-    if(yourMessage.classList.contains("error")){
-        yourMessage.classList.remove("error");
+    if(message.value.lenght < 25){
+        errorNo[2].innerText = "Enter message";
+        message.classList.add("error-border");
+        errorSuccess = true;
     }
-    yourMessage.classList.add("perfect")
-}
-
-const yourEmail = document.querySelector("#yourEmail").value;
-
-const mailFormat =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-if(mailFormat.test(yourEmail) = true){
-if(yourEmail.classList.contains("error")){
-            yourEmail.classList.remove("error")}
-};
-}catch{
-
+    if(subject.value.length < 15){
+        errorNo[3].innerText = "Enter Your Subject";
+        subject.classList.add("error-border");
+        errorSuccess = true;
+    } 
+    if(!errorSuccess){
+        seccessfull.innerText = " Your message has been sent!";
     }
+}  
+function clearMessage(){
+    for(let i = 0; i < errorNo.length; i++){
+        errorNo[i].innerText = "";
+    }
+    nameInput.classList.remove("error-border");
+    email.classList.remove("error-border");
+    message.classList.remove("error-border");
+    subject.classList.remove("error-border");
 }
-contactForm.onsubmit= formHandler  
-
-
-
-
-
+function emailIsValid(email){
+    let pattern = /\S+@\S+\.\S+/;
+    return pattern.test(email);
+}

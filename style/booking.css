@@ -35,6 +35,9 @@ body {
     margin: 0 auto;
     color: #000;
 }
+.container-form, p{
+    display: flex;
+}
 
 form {
     display: grid;
@@ -51,23 +54,10 @@ form {
     padding: 10px 15px;
 }
 .btn {
-    background-color: rgba(0, 0, 0, .95);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    font-size: 18px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-    box-shadow: 7px 10px 12px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
+    background-color: #000;
+    color: white;
+    border-radius: 9px;
+    
 }
 .btn:hover {
     transform: scale(1.03);
@@ -78,4 +68,15 @@ form {
     box-shadow: 10px 12px 15px rgba(0, 0, 0, .3);
 }
 
+select{
+    background-color: #000;
+    color: #fff;
+}
 
+.container-timer,h2,h3{
+    display: block;
+}
+
+.form-field, input{
+    display: block;
+}
