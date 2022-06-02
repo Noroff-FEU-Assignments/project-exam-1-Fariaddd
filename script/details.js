@@ -22,12 +22,7 @@ async function getDetails(){
                 <div class="headline">
                     <h1> ${titleTitle}</h1>
                     <div class="text-container">
-                      <ul>
-                        <li>1 cup uncooked brown basmati rice, for serving (rice is optional, I like to cook extra to have on hand for other meals) </li>
-                                <li>2 tablespoons coconut oil or extra-virgin olive oil</li>
-                                <li>1 medium yellow onion, chopped</li>
-                                <li>½ teaspoon fine sea salt, to taste </li>
-                      </ul>
+                     ${content.content.rendered}
                     </div>
                      <div class="btn-container">
                        <button >ORDER</button>
