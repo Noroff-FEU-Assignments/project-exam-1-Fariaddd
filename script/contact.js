@@ -7,10 +7,8 @@ const subject = document.querySelector("#subject");
 const errorNo = document.querySelectorAll(".bord-error");
 
 function validateForm(){
-
     clearMessage();
     let errorSuccess = false;
-   
     if(nameInput.value.length < 1){
         errorNo[0].innerText = "Name can not be blank";
         nameInput.classList.add("error-border");

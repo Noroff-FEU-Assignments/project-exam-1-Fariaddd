@@ -31,7 +31,7 @@ async function getDetails(){
                                 </div>`
         productsContainer.innerHTML = `
         <div>tittle: ${title}</div> `
-    }catch (error){
+    }catch {
        // console.log(error)
     }
 }
