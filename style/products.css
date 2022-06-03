@@ -181,7 +181,7 @@ body{
   }
   
   button {
-    margin-top: 10px;
+    margin-top: 60px;
     width: 150px;
     height: 40px;
     background-color: #1D1D48;
@@ -201,8 +201,7 @@ body{
     }
   }
  
-.food-container p
-{
+.food-container p{
   width: 50%;
   height: 300px;
   display: flex;
@@ -217,9 +216,7 @@ body{
 .food-text-container{
   width: 50%;
 }
-.section-container{
-  height: 400px;
-}
+
 main{
   margin-top: 100px;
 }
@@ -255,20 +252,31 @@ main{
   width: 100%;
   height: 100%;
 }
-.btn-container{
-  display: flex;
-  padding-left: 20px;
-}
+
 .text-container{
 
   display: flex;
   top: 50px;
   font-size: 17px;
 }
-button{
-  border-radius: 5px;
-  cursor: pointer; 
+
+.headline{
+  width: 100%;
+  height: 550px;
+  padding-right: 1px;
 }
+.text-container-lots-fritos{
+  display: flex;
+  text-align: center;
+  height: 90px;
+}
+
+.container-btn-lots-fritos{
+  top: 100px;
+  cursor: pointer;
+
+}
+
 
 
 

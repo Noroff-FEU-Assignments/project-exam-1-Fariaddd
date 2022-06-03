@@ -1,11 +1,7 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
-
 const APIUrl = `https://tense-expansion.flywheelsites.com/wp-json/wp/v2/posts/${id}`;
-
-
 const productsContainer =document.querySelector(".details-container");
 const title = document.querySelector(".food-text-container")
 const mainImag = document.querySelector(".main-img-container")
@@ -21,31 +17,20 @@ async function getDetails(){
         title.innerHTML += `
                 <div class="headline">
                     <h1> ${titleTitle}</h1>
-                    <div class="text-container">
+                    <div class="text-container-lots-fritos">
                      ${content.content.rendered}
                     </div>
-                     <div class="btn-container">
-                       <button >ORDER</button>
-                    </div>
-                     </div>
-                    </div>  
+                     <div >
+                       <button class="container-btn-lots-fritos" >ORDER</button>
+                    </div> 
                 </div>`
-
-        mainImag.innerHTML += ` <div class="main-img-container">
+        mainImag.innerHTML += `<div class="main-img-container">
                                     <div class="main-img">
                                         <img src="${mainImg}" alt="chana-masala" >
                                     </div>
-                                </div>
-
-        
-
-        `
-
+                                </div>`
         productsContainer.innerHTML = `
-        <div>tittle: ${title}</div>
-        `
-        
-
+        <div>tittle: ${title}</div> `
     }catch (error){
        // console.log(error)
     }

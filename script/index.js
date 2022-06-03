@@ -7,15 +7,10 @@ async function getPosts(){
         const response = await fetch(APIurl);
         const responseJSON = await response.json();
         console.log(responseJSON);
-        
-
         const myArr = responseJSON; 
         //console.log(myArr);
         for (let i = 0; i < myArr.length; i++){
-            
-            
-            
-            getDetails.innerHTML += `
+              getDetails.innerHTML += `
             <div class="div-container">
                 <a href="products.html?id=${myArr[i].id}"> 
                 <img class="img" src="${myArr[i].x_featured_media_medium}" alt="chana-masala"> 
@@ -26,8 +21,8 @@ async function getPosts(){
                 </div>
             </div> `
         }
-    }catch{
-
+    }catch (error){
+        // console.log(error)
     }
 }
 getPosts();
